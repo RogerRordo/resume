@@ -1,7 +1,7 @@
 % !TeX TS-program = xelatex
 
 \documentclass{resume}
-\ResumeName{冯开宇}
+\ResumeName{罗卓枫}
 
 % 如果想插入照片，请使用以下两个库。
 % \usepackage{graphicx}
@@ -10,10 +10,10 @@
 \begin{document}
 
 \ResumeContacts{
-  (+86)188-8888-8888,%
-  \ResumeUrl{mailto:loveress01@outlook.com}{loveress01@outlook.com},%
-  \ResumeUrl{https://blog.fkynjyq.com}{blog.fkynjyq.com} \footnote{下划线内容包含超链接。},%
-  \ResumeUrl{https://github.com/fky2015}{github.com/fky2015}%
+  (+86)137-9036-2333,%
+  \ResumeUrl{mailto:luozhf3@mail2.sysu.edu.cn}{luozhf3@mail2.sysu.edu.cn},%
+  \ResumeUrl{https://github.com/RogerRordo}{github.com/RogerRordo},%
+  \ResumeUrl{https://rordo.top}{rordo.top}%
 }
 
 % 如果想插入照片，请取消此代码的注释。
@@ -28,91 +28,77 @@
 \ResumeTitle
 
 
-\section{教育经历}
-\ResumeItem
-[北京理工大学|硕士研究生]
-{北京理工大学}
-[\textnormal{网络空间安全，网络空间安全学院|}  学术型硕士研究生]
-[2021.09—2024.06（预计）]
+\section{简介}
 
-\textbf{GPA: 3.62/4.0}，主要研究方向为\textbf{拜占庭共识算法}，在分布式系统领域方面有一定的研究和工程经验。\textbf{2024年应届生}。
-
-主要研究成果为：发表在 XXX 期刊上的论文《XXX》。
-
-\ResumeItem
-[北京理工大学|本科生]
-{北京理工大学}
-[\textnormal{计算机科学与技术，计算机学院|} 工学学士]
-[2017.09—2021.06]
-
-\textbf{GPA: 3.7/4.0(专业前 3\%)}，获学业奖学金多次，全国大学生 XYZ 竞赛二等奖（2次），ZYX 竞赛三等奖。
-
-\section[技术能力]{技术能力\protect\footnote{与求职岗位无关的技能省略或用灰色表示。}}
+\textnormal{4年全栈开发经验。Pony.AI系统与工具链团队的软件工程师，负责自动驾驶数据处理与可视化平台的构建、优化和维护，为业务团队提供高效、可靠的数据支撑。}
 \begin{itemize}
-  \item \textbf{语言}: 编程不受特定语言限制。常用 Rust, Golang, Python,C++； 熟悉 C, \GrayText{JavaScript}；了解 Lua, Java, \GrayText{TypeScript}。
-  \item \textbf{工作流}: Linux, Shell, (Neo)Vim, Git, GitHub, GitLab.
-  \item \textbf{其他}: 有容器化技术的实践经验，熟悉 Kubernetes 的使用。
+  \item 精通 Python 开发，熟悉 C++，擅长构建基于 Flask 与 Sqlalchemy ORM 的高性能 Web 应用，实现复杂数据处理。
+  \item 深入掌握 Greenplum/PostgreSQL 和 TiDB/MySQL，具备丰富的数据库调优及大数据分析实践。
+  \item 熟悉现代 DevOps 工具（Bazel、Git、Docker、Argo Workflow、Airflow、ELK），能快速搭建并持续优化容器化微服务。
+  \item 了解 TypeScript、React、Redis、DBT、Spark、Iceberg，具备前后端协同开发和跨语言系统集成能力。
 \end{itemize}
 
 \section{工作经历}
 
-\ResumeItem{北京 ABCD 有限公司}
-[后端开发实习生/XXXX]
-[2020.10—2021.03] 
+\ResumeItem{广州小马智行 Pony.AI}
+[\textnormal{系统与工具链部|} 软件开发工程师]
+[2021.06—present]
 
 \begin{itemize}
-  \item \textbf{独立负责XXX业务后端的设计、开发、测试和部署。}通过 FaaS、Kafka 等平台实现站内信模板渲染服务。向上游提供 SDK 代码，增加或升级了多种离线和在线逻辑。完成了业务对站内信的多样需求。
-  \item \textbf{参与 XXX 的需求分析，系统技术方案设计；完成需求开发、灰度测试、上线和监控。}
+  \item \textbf{路测数据处理与可视化平台开发}
+    \begin{itemize}
+        \item 开发数据分析处理模块，处理 150TB/天 的车辆路测数据，实现运营时长、里程、订单、信号质量、车流/人流等指标的定制化采集和交付。
+        \item 基于 Flask+React 框架，开发高度灵活的数据可视化平台。支持用户按任意维度聚合数据，并以多种图表及地图形式展示，满足各业务部门查询需求。
+        \item 研发通用指标计算模块。通过 Jsonnet 定义计算逻辑和数据血缘，实现 95\%指标的低代码配置，降低业务团队使用门槛。
+        \item 重构数据可视化平台的持续集成和测试体系。设计正交化的测试用例，建立分层测试框架（单元测试、基于 Cypress 的端到端测试、API 测试），将测试效率提升 7 倍以上。
+    \end{itemize}
+  \item \textbf{自动驾驶数据库开发维护与架构优化}
+    \begin{itemize}
+        \item 主导 ADB-PG(Greenplum) 分布式数据库大版本升级。设计并实施双写过渡方案，实现平稳迁移，使指标查询的 P95 延迟从 25s 降至 0.9s，超时率从 10.5‰ 降至 0.24‰。
+        \item 建立数据库开发规范体系，输出《ADB-PG SQL 调优最佳实践》等技术文档，推动团队 SQL Review 规范落地。在对业务 SQL 和数据库设计的持续优化下，数据库 QPS 提升 44\%。
+    \end{itemize}
+  \item \textbf{商业化数据交付系统开发}
+    \begin{itemize}
+        \item 设计基于 Protobuf 的流数据交换协议，编写维护对外接口文档。开发自动化数据适配流水线（Argo Workflow），定时向合作方交付路测数据。
+        \item 创新存储优化方案：通过点云数据扁平化存储、基于 Ramer-Douglas-Peucker 算法的轨迹降采样等技术手段，将存储成本降低 50\%。
+    \end{itemize}
+  \item \textbf{L2+车端核心模块开发}
+    \begin{itemize}
+        \item 主导设计、开发符合 ISO 26262 标准的L2+功能状态机架构，适配底盘、定位、感知、规控等模块接口，实现功能安全。
+    \end{itemize}
 \end{itemize}
 
-\section{项目经历}
+\section{教育背景}
 
-\ResumeItem{\textbf{BusTub} 基于 C++ 的简易单机数据库}
-[ \textnormal{CMU 15-445} 课程]
+\ResumeItem
+[中山大学|本科生]
+{中山大学}
+[\textnormal{光电科学技术与工程|} 工学学士]
+[2016.09—2020.06]
+
+\section{竞赛荣誉}
+
+\ResumeItem
+{2017 中国大学生程序设计竞赛 (CCPC) 秦皇岛站}
+[\textnormal{银奖}]
+[2017.10]
+\ResumeItem
+{2018 广东省大学生程序设计竞赛 (GDCPC)}
+[\textnormal{一等奖}]
+[2018.05]
+\ResumeItem
+{2017 广东省大学生程序设计竞赛 (GDCPC)}
+[\textnormal{一等奖}]
+[2017.05]
+
+\section{开源项目}
+
+\ResumeItem[TenMinsHot]
+{\ResumeUrl{https://github.com/RogerRordo/TenMinsHot}{TenMinsHot}}
+[作者]
 \begin{itemize}
-  \item 实现了基于可扩展哈希表和LRU-K的内存池管理。实现了可并发的B+树，支持乐观加锁的读写操作。
-  \item 采用火山模型实现了查询、修改、连接、聚合等查询执行器，对部分查询进行了改写与下推。
-  \item 采用 2PL 进行并发控制，支持死锁处理、多种隔离级别、表锁和行锁。
-  \item 对数据库系统有了基本的认识和实践。
-\end{itemize}
-
-
-\ResumeItem{\textbf{Multi-Raft} 分布式 \textbf{KV} 存储系统}
-[ \textnormal{MIT 6.824} 课程]
-\begin{itemize}
-  \item 实现了 Raft 协议的选举、日志复制、持久化、日志压缩等基本功能。
-  \item 基于 Raft 协议实现了满足线性一致性的 KV 数据库。
-  \item 采用 Multi-Raft 架构，支持数据分片，分片迁移，分片垃圾回收和分片迁移时读写优化。
-  \item 对分布式系统的设计考量有了更多的认识。
-\end{itemize}
-
-\ResumeItem{\textbf{ZYX} 平台下的某某共识算法设计与实现}
-[共识算法设计与实现]
-[2021.11—2022.07] 
-
-\begin{itemize}
-  \item 根据 ZYX (Rust 实现的开源区块链框架) 的架构，\textbf{修改并实现某某某共识算法}。
-  \item 针对系统进行性能测试，分析瓶颈，并优化吞吐量；TPS 由 1K 达到 6K。
-  \item 此项目为实验室研究项目的一部分。
-\end{itemize}
-
-\ResumeItem[BIThesis 北京理工大学毕设模板集合(开源项目)]
-{\ResumeUrl{https://github.com/BITNP/BIThesis}{\textbf{BIThesis} 北京理工大学毕设 \LaTeX 模板集合}}
-[主要维护者（开源项目）]
-[2020.04 — 今]
-
-\begin{itemize}
-  \item 根据相关排版要求，\textbf{利用 LaTeX3 (expl3) 设计了同时符合各个学位要求且支持灵活配置的宏包及多套模板}。
-  \item 需求开发和问题修复采用标准工作流，引入了回归测试与基于 GitHub Actions 的测试与持续集成。
-  \item 负责了什么什么；完成了怎样的结果。
-\end{itemize}
-
-\section{个人总结}
-
-\begin{itemize}
-  \item 本人乐观开朗、在校成绩优异、自驱能力强，具有良好的沟通能力和团队合作精神。
-  \item 可以使用英语进行工作交流（六级成绩 XXX），平时有阅读英文书籍和口语练习的习惯。
-  \item 有六年 Linux 使用经验，较为丰富的软件开发经验、开源项目贡献和维护经验。善于技术写作，持续关注互联网技术发展。
+  \item 全自动每日生成十分钟时事快讯视频并投稿B站。
+  \item 爬虫爬取腾讯新闻，ChatGPT总结全文，微软TTS转音频，Pillow生成slide图，moviewpy库合成视频，调用B站API上传。
 \end{itemize}
 
 
